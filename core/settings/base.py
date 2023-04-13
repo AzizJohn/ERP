@@ -50,12 +50,13 @@ DJANGO_APPS = [
 CUSTOM_APPS = [
     "apps.common",
     "apps.users",
+    "apps.pract1",
 ]
 
 THIRD_PARTY_APPS = [
-    # "rest_framework",
+    "rest_framework",
     # "django_filters",
-    # "drf_yasg",  # swagger
+    "drf_yasg",  # swagger
     # "corsheaders",  # cors headers
     # "rest_framework_simplejwt",  # JWT Authentication
     # "ckeditor",  # CKEditor

@@ -24,6 +24,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.urls')),  # entry point to other project app urls
+    #pract1 urls
+    path('pract1/', include('apps.pract1.urls'))
 
 ]
 
