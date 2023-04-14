@@ -15,7 +15,7 @@ class Event(TimeStampedModel):
     start_time = models.DateTimeField(verbose_name=_("Time From"))
     end_time = models.DateTimeField(verbose_name=_("Time To"))
     content = RichTextField(verbose_name=_("Content"))
-    image = ImageField(upload_to="events/%Y/%m", verbose_name=_("Image"))
+    image = ImageField(upload_to="events/%Y/%m", verbose_name=_("Image"), null=True, blank=True)
 
     class Meta:
         verbose_name = _("Event")
