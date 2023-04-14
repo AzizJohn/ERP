@@ -50,18 +50,23 @@ DJANGO_APPS = [
 CUSTOM_APPS = [
     "apps.common",
     "apps.users",
-    "apps.pract1",
+    "apps.attendance",
+    "apps.internships",
+    "apps.events",
+    "apps.inventories",
+    "apps.personnel",
+    "apps.projects",
 ]
 
 THIRD_PARTY_APPS = [
     "rest_framework",
-    # "django_filters",
+    "django_filters",
     "drf_yasg",  # swagger
     # "corsheaders",  # cors headers
     # "rest_framework_simplejwt",  # JWT Authentication
-    # "ckeditor",  # CKEditor
+    "ckeditor",  # CKEditor
     # "ckeditor_uploader",  # CKEditor
-    # "sorl.thumbnail",  # for image compressing
+    "sorl.thumbnail",  # for image compressing
 ]
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS + THIRD_PARTY_APPS
@@ -156,7 +161,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = BASE_DIR /'staticfiles'
 
 # Media files
 MEDIA_URL = "media/"
@@ -179,3 +184,4 @@ AUTH_USER_MODEL = "users.CustomUser"
 #         "rest_framework.authentication.BasicAuthentication",  # for browser auth
 #     ),
 # }
+

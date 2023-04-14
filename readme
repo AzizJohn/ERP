@@ -1,0 +1,54 @@
+Personnel: model
+
+personnel
+    id
+    name
+    position
+    avatar
+    date_birth
+    ishga_kirgan_sana
+    salary
+    internship_id   fk to internship
+    bio
+
+internship
+    title (m-n backend, frontend)
+    start_date
+    duration
+    num_interns
+    mentor_id  fk to personnel
+
+projects
+    id
+    title
+    price
+    deadline
+    start_Date
+    current_status   (e-x, finished, in progress)
+
+attendance
+    id
+    personnel_id  fk to personnel
+    datetime (kelgan vaqti: datetimefield) created at dan olsak bo'ladi
+    ish_boshlanish_vaqti: field read_only
+    @property_field kechikkan vaqti: ish_boshlanish vaqti - kelgan vaqt
+
+inventories
+    id
+    name (product_name)
+    price
+    guarantee_expire_date: datefild
+    purchased_data
+
+events
+    id
+    title
+    location
+    start_time
+    end_time
+    description
+    images
+
+
+
+

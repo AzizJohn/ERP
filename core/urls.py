@@ -15,20 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls.static import static
 
-# from .schema import swagger_urlpatterns
+from .schema import swagger_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.urls')),  # entry point to other project app urls
-    #pract1 urls
-    path('pract1/', include('apps.pract1.urls'))
 
 ]
-
+urlpatterns += swagger_urlpatterns
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
