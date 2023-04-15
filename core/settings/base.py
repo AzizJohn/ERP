@@ -65,7 +65,7 @@ THIRD_PARTY_APPS = [
     # "corsheaders",  # cors headers
     # "rest_framework_simplejwt",  # JWT Authentication
     "ckeditor",  # CKEditor
-    # "ckeditor_uploader",  # CKEditor
+    #"ckeditor_uploader",  # CKEditor
     "sorl.thumbnail",  # for image compressing
 ]
 

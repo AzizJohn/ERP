@@ -30,5 +30,6 @@ class Personnel(TimeStampedModel):
         return self.full_name
 
     class Meta:
+        app_label = 'personnel'
         verbose_name = _("Personnel")
         verbose_name_plural = _("Personnel")
